@@ -1,0 +1,404 @@
+:root {
+    --bg: #081526;
+    --main-color: #D9043D;
+    --black: #08090D;
+    --light: #E5E6EA;
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Poppins", serif;
+    color: var(--light);
+}
+
+html {
+    scroll-padding: 6rem;
+    scroll-behavior: smooth; /* scrool suave */
+  }
+    
+body {
+    background-color: var(--bg);
+    padding-top: 5rem;
+}
+
+.header {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem; /* Espaçamento lateral */
+}
+
+
+.logo {
+    color: var(--main-color);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--light);
+}
+
+.navbar a {
+    color: var(--light);
+    font-size: 1.6rem;
+    margin: 0 0 0 3rem;
+    display: inline-block; /* Garante que o scale funcione corretamente */
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    transform: scale(1.1); /* Aumenta o tamanho visualmente */
+}
+
+.home {
+    background: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, var(--bg) 100%), /* Degradê transparente */
+      url('assets/bg.png') no-repeat center/cover; /* Imagem de fundo */
+    background-position: center;
+    background-size: cover;
+
+}
+
+.home .home-container {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.title h3 {
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.title h1 {
+    font-size: 7.5rem;
+    font-weight: bold;
+}
+
+.title h1 span {
+    color: var(--main-color);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+.slogan {
+    margin: 4rem 0;
+    font-size: 2rem;
+}
+
+.slogan span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: var(--bg);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
+.imagem img {
+    width: 40rem;
+}
+
+.imagem img:hover {
+    transform: translateY(-1.5rem);
+}
+
+.about-container {
+    padding: 5rem;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.subtitle span {
+    color: var(--main-color);
+}
+
+.p-text {
+    font-size: 2rem;
+    width: 83rem;
+    margin-bottom: 4rem;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.fig-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--light);
+    width: 10rem;
+    height: 10rem;
+    border-bottom: 10px solid var(--main-color);
+    transition: all 0.2s !important;
+}
+
+.fig-skills figcaption {
+    color: var(--bg);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.fig-skills:hover {
+    background-color: var(--black);
+    transform: scale(1.1);
+}
+
+.fig-skills:hover figcaption {
+    color: #ffffff;
+}
+
+.projects {
+    background: var(--light);
+}
+
+.projects-container {
+    padding: 5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-container .subtitle {
+    color: var(--black);
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanhos iguais */
+    gap: 1.5rem; /* Espaçamento entre os itens */
+    max-width: 90vw; /* Limita a largura total do container */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+.box {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden; /* Esconde qualquer parte da imagem que ultrapasse a caixa */
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: scale(1.06);
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche toda a área da caixa, mantendo a proporção da imagem */
+}
+
+/* Máscara que aparece no hover */
+.box .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Cor de fundo semitransparente */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transição suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Aparece a máscara no hover */
+.box:hover .mask {
+    opacity: 1;
+}
+
+/* Estilo dos links de ícones */
+.icon-link {
+    color: #ffffff;
+    font-size: 2rem; /* Tamanho dos ícones */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
+}
+
+.contact {
+    background: var(--black);
+}
+
+.contact-container {
+    min-height: 100vh;
+    padding: 5rem 0;
+}
+
+.contact-container .subtitle {
+    color: var(--main-color);
+    text-align: center;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 6rem;
+}
+
+.social-contact {
+    margin-top: 4rem;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.social a {
+    font-size: 1.8rem;
+}
+
+.text-container p {
+    font-size: 1.8rem;
+}
+
+.text-container span {
+    font-weight: 700;
+}
+
+.form {
+    background: #08152680;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+}
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40rem;
+}
+
+.form-contact input {
+    height: 4rem;
+    border-radius: 1rem;
+    padding: 0 3rem 0 1.5rem;
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+.form-contact textarea {
+    border-radius: 1rem;
+    height: 8rem;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    color: var(--black);
+}
+
+.form-contact button {
+    background: var(--main-color);
+    width: 20rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.footer-container {
+    min-width: 100%;
+    border-top: 1px solid var(--light);
+    padding: 1.5rem;
+}
+
+.footer-container h3 {
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-container p {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.btn-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 3.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; /* Previne cliques enquanto invisível */
+}
+
+.btn-top.visible {
+    opacity: 1; /* Tornar visível */
+    transform: translateY(0); /* Posição original */
+    pointer-events: auto; /* Permitir cliques */
+}
+
+.btn-top:hover {
+    transform: translateY(-1rem);
+}
+
+.text-content, .imagem, .subtitle, .p-text, .sr1, .sr2, .sr3, .box-container, .text-container, .form {
+    visibility: hidden;
+}
