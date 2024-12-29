@@ -489,7 +489,7 @@ section {
     }
 
     /* Aparece a máscara no hover */
-    .box:active .mask {
+    .box:focus .mask {
     display: flex;
     }
 
