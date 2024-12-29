@@ -269,9 +269,10 @@ section {
 /* Estilo dos links de ícones */
 .icon-link {
     color: #ffffff;
-    font-size: 2rem; /* Tamanho dos ícones */
+    font-size: 3.5rem; /* Tamanho dos ícones */
     text-decoration: none;
     transition: transform 0.3s ease;
+    margin: 1rem;
 }
 
 .icon-link:hover {
@@ -425,7 +426,6 @@ section {
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        padding: 10rem 0;
     }
 
     .imagem img {
@@ -479,8 +479,8 @@ section {
     }
 
     .icon-link {
-        font-size: 4rem;
-        margin: 2rem;
+        font-size: 5rem;
+        margin: 3rem;
     }
 
     .contact-content {
