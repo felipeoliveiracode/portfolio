@@ -19,11 +19,13 @@
 }
 
 html {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
     scroll-padding: 6rem;
     scroll-behavior: smooth; /* scrool suave */
   }
     
 body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
     background-color: var(--bg);
     padding-top: 5rem;
 }
@@ -445,12 +447,16 @@ section {
         display: inline-flex;
     }
 
+    .about-container {
+        justify-content: center;
+    }
+
     .subtitle {
         font-size: 3.5rem;
     }
 
     .p-text {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         width: 90vw;
     }
 
@@ -481,6 +487,15 @@ section {
     .icon-link {
         font-size: 5rem;
         margin: 3rem;
+    }
+
+    /* Aparece a máscara no hover */
+    .box:active .mask {
+    opacity: 1;
+    }
+
+    .icon-link:active {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
     }
 
     .contact-content {
