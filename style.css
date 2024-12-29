@@ -219,7 +219,7 @@ section {
 }
 
 .projects-container {
-    padding: 5rem;
+    padding: 5rem 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -236,7 +236,7 @@ section {
     /* 3 colunas de tamanhos iguais */
     gap: 1.5rem;
     /* Espaçamento entre os itens */
-    max-width: 90vw;
+    max-width: 95vw;
     /* Limita a largura total do container */
     margin: 0 auto;
     /* Centraliza o container */
