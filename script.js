@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const backToTopButton = document.querySelector('.btn-top');
-  
-    window.addEventListener("scroll", () => {
-      // Mostrar o botão após rolar 300px
-      if (window.scrollY > 300) {
-        backToTopButton.classList.add("visible");
-      } else {
-        backToTopButton.classList.remove("visible");
-      }
-    });
-  });
+  const backToTopButton = document.querySelector('.btn-top');
 
-window.sr = ScrollReveal({reset: true});
+  window.addEventListener("scroll", () => {
+    // Mostrar o botão após rolar 300px
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add("visible");
+    } else {
+      backToTopButton.classList.remove("visible");
+    }
+  });
+});
+
+window.sr = ScrollReveal({ reset: true });
 
 sr.reveal('.text-content', {
   origin: 'left',
@@ -27,7 +27,7 @@ sr.reveal('.imagem', {
 });
 
 sr.reveal('.subtitle', {
-  rotate: {x: 100, y: 20, z:0},
+  rotate: { x: 100, y: 20, z: 0 },
   duration: 2000,
   scale: 0.5
 });

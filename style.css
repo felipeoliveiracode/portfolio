@@ -19,13 +19,16 @@
 }
 
 html {
-    overflow-x: hidden; /* Impede a rolagem horizontal */
+    overflow-x: hidden;
+    /* Impede a rolagem horizontal */
     scroll-padding: 6rem;
-    scroll-behavior: smooth; /* scrool suave */
-  }
-    
+    scroll-behavior: smooth;
+    /* scrool suave */
+}
+
 body {
-    overflow-x: hidden; /* Impede a rolagem horizontal */
+    overflow-x: hidden;
+    /* Impede a rolagem horizontal */
     background-color: var(--bg);
     padding-top: 5rem;
 }
@@ -48,7 +51,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem; /* Espaçamento lateral */
+    padding: 0 2rem;
+    /* Espaçamento lateral */
 }
 
 
@@ -66,18 +70,22 @@ section {
     color: var(--light);
     font-size: 1.6rem;
     margin: 0 0 0 3rem;
-    display: inline-block; /* Garante que o scale funcione corretamente */
+    display: inline-block;
+    /* Garante que o scale funcione corretamente */
 }
 
 .navbar a:hover {
     color: var(--main-color);
-    transform: scale(1.1); /* Aumenta o tamanho visualmente */
+    transform: scale(1.1);
+    /* Aumenta o tamanho visualmente */
 }
 
 .home {
-    background: 
-      linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, var(--bg) 100%), /* Degradê transparente */
-      url('assets/bg.png') no-repeat center/cover; /* Imagem de fundo */
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, var(--bg) 100%),
+        /* Degradê transparente */
+        url('assets/bg.png') no-repeat center/cover;
+    /* Imagem de fundo */
     background-position: center;
     background-size: cover;
 
@@ -224,16 +232,21 @@ section {
 
 .box-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanhos iguais */
-    gap: 1.5rem; /* Espaçamento entre os itens */
-    max-width: 90vw; /* Limita a largura total do container */
-    margin: 0 auto; /* Centraliza o container */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas de tamanhos iguais */
+    gap: 1.5rem;
+    /* Espaçamento entre os itens */
+    max-width: 90vw;
+    /* Limita a largura total do container */
+    margin: 0 auto;
+    /* Centraliza o container */
 }
 
 .box {
     position: relative;
     aspect-ratio: 16 / 9;
-    overflow: hidden; /* Esconde qualquer parte da imagem que ultrapasse a caixa */
+    overflow: hidden;
+    /* Esconde qualquer parte da imagem que ultrapasse a caixa */
     cursor: pointer;
 }
 
@@ -244,7 +257,8 @@ section {
 .box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Preenche toda a área da caixa, mantendo a proporção da imagem */
+    object-fit: cover;
+    /* Preenche toda a área da caixa, mantendo a proporção da imagem */
 }
 
 /* Máscara que aparece no hover */
@@ -254,8 +268,10 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Cor de fundo semitransparente */
-    transition: opacity 0.3s ease; /* Transição suave */
+    background: rgba(0, 0, 0, 0.6);
+    /* Cor de fundo semitransparente */
+    transition: opacity 0.3s ease;
+    /* Transição suave */
     display: none;
     justify-content: center;
     align-items: center;
@@ -274,7 +290,8 @@ section {
 /* Estilo dos links de ícones */
 .icon-link {
     color: #ffffff;
-    font-size: 3.5rem; /* Tamanho dos ícones */
+    font-size: 3.5rem;
+    /* Tamanho dos ícones */
     text-decoration: none;
     transition: transform 0.3s ease;
     margin: 1rem;
@@ -282,7 +299,8 @@ section {
 }
 
 .icon-link:hover {
-    transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
+    transform: scale(1.2);
+    /* Aumenta o tamanho do ícone no hover */
 }
 
 .contact {
@@ -393,20 +411,33 @@ section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none; /* Previne cliques enquanto invisível */
+    pointer-events: none;
+    /* Previne cliques enquanto invisível */
 }
 
 .btn-top.visible {
-    opacity: 1; /* Tornar visível */
-    transform: translateY(0); /* Posição original */
-    pointer-events: auto; /* Permitir cliques */
+    opacity: 1;
+    /* Tornar visível */
+    transform: translateY(0);
+    /* Posição original */
+    pointer-events: auto;
+    /* Permitir cliques */
 }
 
 .btn-top:hover {
     transform: translateY(-1rem);
 }
 
-.text-content, .imagem, .subtitle, .p-text, .sr1, .sr2, .sr3, .box-container, .text-container, .form {
+.text-content,
+.imagem,
+.subtitle,
+.p-text,
+.sr1,
+.sr2,
+.sr3,
+.box-container,
+.text-container,
+.form {
     visibility: hidden;
 }
 
@@ -436,7 +467,7 @@ section {
 
     .imagem img {
         max-width: 80vw;
-    }    
+    }
 
     .title h3 {
         font-size: 1.5rem;
@@ -446,7 +477,7 @@ section {
     .title h1 {
         font-size: 4.5rem;
     }
-    
+
     .icons {
         display: inline-flex;
     }
@@ -495,7 +526,7 @@ section {
 
     /* Aparece a máscara no hover */
     .box:focus .mask {
-    display: flex;
+        display: flex;
     }
 
     .box:focus .icon-link {
