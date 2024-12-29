@@ -267,6 +267,10 @@ section {
     display: flex;
 }
 
+.box:hover .icon-link {
+    display: flex;
+}
+
 /* Estilo dos links de ícones */
 .icon-link {
     color: #ffffff;
@@ -274,6 +278,7 @@ section {
     text-decoration: none;
     transition: transform 0.3s ease;
     margin: 1rem;
+    display: none;
 }
 
 .icon-link:hover {
@@ -491,6 +496,10 @@ section {
     /* Aparece a máscara no hover */
     .box:focus .mask {
     display: flex;
+    }
+
+    .box:focus .icon-link {
+        display: flex;
     }
 
     .contact-content {
