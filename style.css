@@ -349,7 +349,7 @@ section {
 }
 
 .form {
-    background: #08152680;
+    background: rgba(8, 21, 38, 0.502);
     border-radius: 1rem;
     padding: 3rem 2rem;
 }
@@ -496,7 +496,6 @@ section {
     }
 
     .skills {
-        width: 80vw;
         gap: 1rem;
     }
 
